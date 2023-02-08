@@ -11,7 +11,7 @@ def get_ip_address(ifname):
         struct.pack('256s', ifname[:15])
     )[20:24])
 
-HOST = get_ip_address('wlan0')
+HOST = "192.168.168.38"
 PORT = 65432  # Port to listen on (non-privileged ports are > 1023)
 
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
